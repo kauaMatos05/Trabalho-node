@@ -23,15 +23,24 @@ npx tsc --init
 ```json
 {
   "compilerOptions": {
+    "types": ["node"],
     "target": "ES2020",
     "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": false,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
     "strict": true,
-    "esModuleInterop": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipLibCheck": true
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true
   }
 }
 ```
